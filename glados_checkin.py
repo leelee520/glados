@@ -5,8 +5,8 @@ def glados_checkin():
     headers = {
         "Accept": "application/json, text/plain, */*",
         "Content-Type": "application/json;charset=UTF-8",
-        "Authorization": "你的Authorization令牌",  # 从教程获取，替换成你的
-        "Cookie": "你的Cookie值",                  # 从浏览器开发者工具获取，替换成你的
+        "Authorization": "glados.rocks",  # 从教程获取，替换成你的
+        "Cookie": "__stripe_mid=412e5aff-9130-40f5-98bf-0dfd1d61d8d89a914b; koa:sess=eyJ1c2VySWQiOjYwODM5NSwiX2V4cGlyZSI6MTc3MzU1NzM2MjIzMiwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=_6kGVjiDlvOYOmMbljJT_2npbzY",                  # 从浏览器开发者工具获取，替换成你的
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     }
     json_body = {
