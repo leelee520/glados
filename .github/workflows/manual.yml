@@ -9,6 +9,10 @@ jobs:
   run-checkin:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: leelee520  # 关键：让每一步都在这个目录下执行
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -28,4 +32,3 @@ jobs:
           AUTHORIZATION: ${{ secrets.AUTHORIZATION }}
           COOKIE: ${{ secrets.COOKIE }}
         run: python glados_checkin.py
-
