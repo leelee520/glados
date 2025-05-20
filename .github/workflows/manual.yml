@@ -20,7 +20,9 @@ jobs:
 
       - name: Check current directory and files
         run: |
+          echo "🔍 当前目录为："
           pwd
+          echo "📂 当前目录文件列表："
           ls -la
 
       - name: Install dependencies
