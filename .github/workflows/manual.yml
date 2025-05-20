@@ -9,10 +9,6 @@ jobs:
   run-checkin:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: leelee520  # 关键：让每一步都在这个目录下执行
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -21,6 +17,11 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+
+      - name: Check current directory and files
+        run: |
+          pwd
+          ls -la
 
       - name: Install dependencies
         run: |
