@@ -2,7 +2,7 @@ name: Daily Checkin
 
 on:
   schedule:
-    # 每天凌晨0点执行（UTC时间），你可以根据需要调整cron表达式
+    # 每天凌晨2点执行（UTC时间），也就是北京时间10点
     - cron: '0 2 * * *'
   workflow_dispatch: # 允许手动触发
 
@@ -28,3 +28,4 @@ jobs:
         env:
           AUTHORIZATION: ${{ secrets.AUTHORIZATION }}
           COOKIE: ${{ secrets.COOKIE }}
+        run: python glados_checkin.py
